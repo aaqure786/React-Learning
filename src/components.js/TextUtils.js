@@ -11,28 +11,33 @@ export default function TextUtils(props) {
     {
         
         setText('');
+        props.showAlert("Text is Cleared", "success");
         
     }
     const handleUpValue = ()=>
     {
         let newtext = text.toUpperCase();
         setText(newtext);
+        props.showAlert("Text is converted to Upper case", "success");
     }
     const LowerCaseText = ()=>
     {
         let newtext = text.toLowerCase();
         setText(newtext);
+        props.showAlert("Text is converted to Lower case", "success");
     }
     const CopyText = ()=>
     {
         var text = document.getElementById("myText");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text is Copied to Clipboard", "success");
     }
     const HandleExtraSpaces = ()=>
     {
        let newtext = text.split(/[  ]+/);
        setText(newtext.join(" "))
+       props.showAlert("Extra Spaces are handled", "success");
     }
     const [text, setText]= useState("Enter Your Text here");
   return (
