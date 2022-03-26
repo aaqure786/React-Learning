@@ -44,7 +44,7 @@ function App() {
     <>
     <Router>
       
-    <Navbar SiteName = "TextUtils" Link1="Home" Link2="About Us" mode = {mode} toggleMode ={togleMode }/>
+    <Navbar SiteName = "Text Analyzer" Link1="Home" Link2="About Us" mode = {mode} toggleMode ={togleMode }/>
     <Alert alert = {alert} />
     
     <div className="container">
